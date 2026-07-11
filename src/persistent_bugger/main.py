@@ -1,7 +1,7 @@
 from math import prod
 
 
-def persistent(number):
+def persistence(number):
     iterations = 0
     while len(str(number)) > 1:
         digits_prod = prod(int(n) for n in str(number))
@@ -10,6 +10,6 @@ def persistent(number):
     return iterations
 
 if __name__ == "__main__":
-    print(persistent(39))
-    print(persistent(9425))
-    print(persistent(4))
+    print(persistence(39))
+    print(persistence(999))
+    print(persistence(4))
