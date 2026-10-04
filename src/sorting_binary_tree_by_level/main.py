@@ -18,7 +18,7 @@ def append_level(node, level_value_dict, actual_level):
         append_level(node.left, level_value_dict, actual_level)
 
     if node.right:
-        append_level(node.right, level_value_dict,actual_level)
+        append_level(node.right, level_value_dict, actual_level)
 
 def tree_by_levels(node):
     if node is None:
@@ -40,10 +40,3 @@ def tree_by_levels(node):
 if __name__ == '__main__':
     print(tree_by_levels(None))
     print(tree_by_levels(Node(Node(None, Node(Node(None, None, 7), None, 4), 2), Node(Node(None, None, 5), Node(Node(None, None, 8), None, 6), 3), 1)))
-
-'''
-            1
-    2               3
-4               5       6
-7               8
-'''
