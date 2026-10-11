@@ -1,3 +1,20 @@
+# def last_digit(lst):
+#     if len(lst) < 1:
+#         return 1
+#     elif len(lst) == 1:
+#         return lst.pop() % 10
+#
+#     power = lst.pop()
+#
+#     while len(lst) > 0:
+#         power = power if power < 4 else power % 4 + 4
+#         value = lst.pop()
+#
+#         power = value ** power
+#
+#     return power % 10
+
+
 def last_digit(lst):
     if len(lst) < 1:
         return 1
@@ -9,6 +26,7 @@ def last_digit(lst):
     while len(lst) > 0:
         power = power % 104
         value = lst.pop()
+
         power = value ** power
 
     return power % 10
@@ -23,3 +41,4 @@ if __name__ == "__main__":
     print(last_digit([4, 3, 6]))    # 4
     print(last_digit([12, 30, 21])) # 6
     print(last_digit([7, 6, 21]))   # 1
+    print(last_digit([3, 9, 104]))   # 1
