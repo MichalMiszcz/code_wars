@@ -1,31 +1,31 @@
-package main.java.stop_spinning_my_words;
+package main.java.stopspinningmywords;
 
 class SpinWords {
     public String spinWords(String sentence) {
         String[] words = sentence.split(" ");
 
-        String final_sentence = "";
+        StringBuilder finalSentence = new StringBuilder();
         int i = 0;
         for (String word : words) {
             if (i > 0) {
-                final_sentence += " ";
+                finalSentence.append(" ");
             }
 
             if (word.length() >= 5) {
-                StringBuilder new_word = new StringBuilder();
+                StringBuilder newWord = new StringBuilder();
                 for (char character : word.toCharArray()) {
-                    new_word.insert(0, character);
+                    newWord.insert(0, character);
                 }
-                final_sentence += new_word;
+                finalSentence.append(newWord);
             }
             else {
-                final_sentence += word;
+                finalSentence.append(word);
             }
 
             i++;
         }
 
-        return final_sentence;
+        return finalSentence.toString();
     }
 }
 
