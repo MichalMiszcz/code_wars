@@ -10,7 +10,8 @@ public class MorseCodeDecoder {
             String[] morseCharacters = morseWords[i].split(" ");
             StringBuilder sb = new StringBuilder();
             for (String character : morseCharacters) {
-                sb.append(MorseCode.get(character));
+//                sb.append(MorseCode.get(character));
+                continue;
             }
 
             words[i] = sb.toString();
